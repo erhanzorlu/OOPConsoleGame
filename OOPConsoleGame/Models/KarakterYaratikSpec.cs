@@ -8,10 +8,10 @@ namespace OOPConsoleGame.Models
 {
     internal class KarakterYaratikSpec:BaseEntity
     {
-        public string MaksimumCan { get; set; }
-        public string MevcutCan { get; set; }
-        public string MaksimumEnerji { get; set; }
-        public string MevcutEnerji { get; set; }
+        public virtual int MaksimumCan { get; set; }
+        public int MevcutCan { get; set; }
+        public virtual int MaksimumEnerji { get; set; }
+        public int MevcutEnerji { get; set; }
 
     }
 }

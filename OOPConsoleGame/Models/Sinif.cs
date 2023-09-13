@@ -8,5 +8,6 @@ namespace OOPConsoleGame.Models
 {
     internal class Sinif:BaseEntity
     {
+        public List<Karakter> Karakterler {  get; set; }    
     }
 }

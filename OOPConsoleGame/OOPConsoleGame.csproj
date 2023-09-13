@@ -44,12 +44,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\Bolge.cs" />
+    <Compile Include="Models\ElitYaratik.cs" />
     <Compile Include="Models\Irk.cs" />
     <Compile Include="Models\Karakter.cs" />
     <Compile Include="Models\KarakterYaratikSpec.cs" />
+    <Compile Include="Models\Kita.cs" />
     <Compile Include="Models\Sehir.cs" />
     <Compile Include="Models\Sinif.cs" />
     <Compile Include="Models\Yaratik.cs" />
+    <Compile Include="Models\Zindan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

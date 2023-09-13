@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace OOPConsoleGame.Models
 {
-    internal class Sehir:BaseEntity
-    {
-        public List<Irk> Irklar { get; set; }
-        public Bolge Bolge { get; set; }
+    
 
-    }
+    internal class Zindan
+    {
+        public Bolge Bolge { get; set; }
+        public Sehir Sehir { get; set; }
+        public List<Yaratik> Yaratiklar { get; set; }
+        public List<ElitYaratik> ElitYaratiklar { get; set; }
+    } 
 }

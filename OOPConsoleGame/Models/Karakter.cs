@@ -6,20 +6,61 @@ using System.Threading.Tasks;
 
 namespace OOPConsoleGame.Models
 {
-    internal class Karakter:BaseEntity
+    internal class Karakter:KarakterYaratikSpec
     {
         public Karakter()
         {
             Seviye = 1;
             MaksimumCan = 100;
             MaksimumEnerji = 20;
-            
+
+
+            switch (Sinifi.Isim.ToLower())
+            {
+                case "savasci":
+                    Guc = 3;
+                    Dayaniklilik = 3;
+                    Ceviklik = 2;
+                    Irade = 1;
+                    break;
+
+                case "okcu":
+                    Guc = 2;
+                    Dayaniklilik = 2;
+                    Ceviklik = 3;
+                    Irade = 1;
+                    break;
+
+                case "buyucu":
+                    Guc = 3;
+                    Dayaniklilik = 1;
+                    Ceviklik = 2;
+                    Irade = 3;
+                    break;
+
+                case "paladin":
+                    Guc = 3;
+                    Dayaniklilik = 3;
+                    Ceviklik = 1;
+                    Irade = 3;
+                    break;
+
+                case "ninja":
+                    Guc = 2;
+                    Dayaniklilik = 2;
+                    Ceviklik = 3;
+                    Irade = 2;
+
+                    break;
+
+            }
+
         }
       
 
         int _maksimumCan;
         
-        public int MaksimumCan {
+        public override int MaksimumCan {
 
             get
             {
@@ -45,10 +86,10 @@ namespace OOPConsoleGame.Models
                 }
             }       
         }
-        public int MevcutCan { get; set; }
-        public int Seviye { get; set; }
+       
+    
         int _maksimumEnerji;
-        public int MaksimumEnerji {
+        public override int MaksimumEnerji {
             get 
             { 
             if(Seviye==1 && _maksimumEnerji != 100)
@@ -73,13 +114,14 @@ namespace OOPConsoleGame.Models
                 }
             }
         }
-        public int MevcutEnerji { get; set; }
 
-
+        public Irk Irk { get; set; }
+        public int Seviye { get; set; }
         //Stats
         public int Guc { get; set; }
         public int Ceviklik { get; set; }
         public int Irade { get; set; }
+        public int Dayaniklilik { get; set; }
 
         public Sinif Sinifi { get; set; }
 

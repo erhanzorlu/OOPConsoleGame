@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace OOPConsoleGame.Models
 {
-    internal class Sehir:BaseEntity
+    internal class Kita:BaseEntity
     {
-        public List<Irk> Irklar { get; set; }
-        public Bolge Bolge { get; set; }
-
+        public List<Bolge> Bolgeler { get; set; }
     }
 }

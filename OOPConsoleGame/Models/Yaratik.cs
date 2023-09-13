@@ -8,6 +8,6 @@ namespace OOPConsoleGame.Models
 {
     internal class Yaratik:KarakterYaratikSpec
     {
-        
+        public Zindan Zindan { get; set; }
     }
 }
