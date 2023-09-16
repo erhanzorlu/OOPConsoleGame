@@ -8,12 +8,19 @@ namespace OOPConsoleGame.Models
 {
     internal class Karakter:KarakterYaratikSpec
     {
-        public Karakter()
+        //Todo:Abstraction Prensibi !!!
+        //Todo2: Tecrübe puanına före level ayarlaması yapılacak (Bunun için ideal olan bir kontrol metodu yazılması)
+
+        //Todo3:Silah ve esya sistemi olusturulacak
+
+        //Todo3:
+        public Karakter(Sinif sinif,Irk irk)
         {
             Seviye = 1;
             MaksimumCan = 100;
-            MaksimumEnerji = 20;
-
+            MaksimumEnerji = 50;
+            Sinifi=sinif;
+            Irk=irk;
 
             switch (Sinifi.Isim.ToLower())
             {
@@ -53,6 +60,29 @@ namespace OOPConsoleGame.Models
 
                     break;
 
+            }
+            switch (Irk.Isim.ToLower())
+            {
+                case "insan":
+                    Irade += 1;
+                    break;
+
+                case "ork":
+                    Dayaniklilik += 2;
+                    break;
+
+                case "elf":
+                    Ceviklik += 1;
+                    break;
+
+                case "cuce":
+                    Guc += 2;
+                    break;
+
+                case "undead":
+                    Guc += 3;
+                    Irade += 1;
+                    break;
             }
 
         }
@@ -115,15 +145,25 @@ namespace OOPConsoleGame.Models
             }
         }
 
+
+
+        public Sinif Sinifi { get; set; }
         public Irk Irk { get; set; }
         public int Seviye { get; set; }
+        
+        
+        
         //Stats
         public int Guc { get; set; }
         public int Ceviklik { get; set; }
         public int Irade { get; set; }
         public int Dayaniklilik { get; set; }
+        public int Para { get; set; }
 
-        public Sinif Sinifi { get; set; }
+        public override int YakinSaldiri()
+        {
+            return base.YakinSaldiri()+Guc+Seviye;
+        }
 
     }
 }

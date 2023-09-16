@@ -12,6 +12,14 @@ namespace OOPConsoleGame.Models
         public int MevcutCan { get; set; }
         public virtual int MaksimumEnerji { get; set; }
         public int MevcutEnerji { get; set; }
+        public virtual int TecrubePuani { get; set; }
 
+
+        public virtual int YakinSaldiri()
+        {
+
+            Random rnd = new Random();
+            return rnd.Next(1,21);
+        }
     }
 }

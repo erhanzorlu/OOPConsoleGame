@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOPConsoleGame.Models
 {
-    internal class Yaratik:KarakterYaratikSpec
+    internal class Gorev
     {
-        // public Zindan Zindan { get; set; }
-     
     }
 }

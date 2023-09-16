@@ -8,6 +8,10 @@ namespace OOPConsoleGame.Models
 {
     internal class Sinif:BaseEntity
     {
+        public Sinif(string isim)
+        {
+            Isim = isim;
+        }
         public List<Karakter> Karakterler {  get; set; }    
     }
 }

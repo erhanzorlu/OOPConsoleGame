@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace OOPConsoleGame.Models
 {
     
-
+    // todo:30.17
     internal class Zindan
     {
         public Bolge Bolge { get; set; }

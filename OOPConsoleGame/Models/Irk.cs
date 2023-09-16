@@ -9,8 +9,9 @@ namespace OOPConsoleGame
 {
     internal class Irk : BaseEntity
     {
-        public Irk()
+        public Irk(string isim)
         {
+            Isim = isim;
             switch (Isim.ToLower())
             {
                 case "insan":

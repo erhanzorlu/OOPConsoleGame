@@ -11,17 +11,14 @@ namespace OOPConsoleGame
     {
         static void Main(string[] args)
         {
-            BaseEntity entity = new Irk()
-            {
-                
-            };
-            //Console.WriteLine("Lütfen karaktere isim veriniz");
-            //Karakter karakter = new Karakter();
-            //karakter.Isim = Console.ReadLine();
+            Irk irk = new Irk("insan");
+            Sinif s=new Sinif("savasci");
+        
+           
 
-            //Console.WriteLine(karakter.MaksimumCan);
+            Karakter k = new Karakter(s,irk);
 
-
+            Console.WriteLine("Yakın Saldırı: "+k.YakinSaldiri());
             Console.ReadLine();
 
         }
