@@ -36,6 +36,35 @@ namespace OOPConsoleGame
                     break;
             }
         }
+
+        public void StatBelirle(Karakter k)
+        {
+            switch (Isim.ToLower())
+            {
+                case "insan":
+                    k.Irade += IradeModifikasyonu;
+                    break;
+
+                case "ork":
+                    k.Dayaniklilik += DayaniklilikModifikasyonu;
+                    break;
+
+                case "elf":
+                    k.Ceviklik += CeviklikModifikasyonu;
+                    break;
+
+                case "cuce":
+                    k.Guc += GucModifikasyonu;
+                    break;
+
+                case "undead":
+                    k.Guc += GucModifikasyonu;
+                    k.Irade += IradeModifikasyonu;
+                    break;
+                default:
+                    break;
+            }
+        }
         public int GucModifikasyonu { get; set; }
         public int CeviklikModifikasyonu { get; set; }
         public int IradeModifikasyonu { get; set; }

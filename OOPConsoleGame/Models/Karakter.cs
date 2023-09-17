@@ -13,7 +13,7 @@ namespace OOPConsoleGame.Models
 
         //Todo3:Silah ve esya sistemi olusturulacak
 
-        //Todo3:
+        
         public Karakter(Sinif sinif,Irk irk)
         {
             Seviye = 1;
@@ -22,68 +22,8 @@ namespace OOPConsoleGame.Models
             Sinifi=sinif;
             Irk=irk;
 
-            switch (Sinifi.Isim.ToLower())
-            {
-                case "savasci":
-                    Guc = 3;
-                    Dayaniklilik = 3;
-                    Ceviklik = 2;
-                    Irade = 1;
-                    break;
-
-                case "okcu":
-                    Guc = 2;
-                    Dayaniklilik = 2;
-                    Ceviklik = 3;
-                    Irade = 1;
-                    break;
-
-                case "buyucu":
-                    Guc = 3;
-                    Dayaniklilik = 1;
-                    Ceviklik = 2;
-                    Irade = 3;
-                    break;
-
-                case "paladin":
-                    Guc = 3;
-                    Dayaniklilik = 3;
-                    Ceviklik = 1;
-                    Irade = 3;
-                    break;
-
-                case "ninja":
-                    Guc = 2;
-                    Dayaniklilik = 2;
-                    Ceviklik = 3;
-                    Irade = 2;
-
-                    break;
-
-            }
-            switch (Irk.Isim.ToLower())
-            {
-                case "insan":
-                    Irade += 1;
-                    break;
-
-                case "ork":
-                    Dayaniklilik += 2;
-                    break;
-
-                case "elf":
-                    Ceviklik += 1;
-                    break;
-
-                case "cuce":
-                    Guc += 2;
-                    break;
-
-                case "undead":
-                    Guc += 3;
-                    Irade += 1;
-                    break;
-            }
+            sinif.StatBelirle(this);
+           irk.StatBelirle(this);
 
         }
       
