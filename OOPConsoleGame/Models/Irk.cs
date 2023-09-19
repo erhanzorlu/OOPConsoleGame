@@ -1,4 +1,5 @@
-﻿using OOPConsoleGame.Models;
+﻿using OOPConsoleGame.Interfaces;
+using OOPConsoleGame.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OOPConsoleGame
 {
-    internal class Irk : BaseEntity
+    internal class Irk : BaseEntity,IStat
     {
         public Irk(string isim)
         {
@@ -65,6 +66,9 @@ namespace OOPConsoleGame
                     break;
             }
         }
+
+   
+
         public int GucModifikasyonu { get; set; }
         public int CeviklikModifikasyonu { get; set; }
         public int IradeModifikasyonu { get; set; }

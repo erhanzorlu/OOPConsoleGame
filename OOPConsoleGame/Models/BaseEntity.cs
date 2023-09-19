@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOPConsoleGame.Models
 {
-    internal class BaseEntity
+    internal abstract class BaseEntity
     {
         public string Isim { get; set; }
         public DateTime VeriYaratmaTarihi { get; set; }

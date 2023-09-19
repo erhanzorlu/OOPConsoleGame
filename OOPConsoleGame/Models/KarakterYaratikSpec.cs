@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace OOPConsoleGame.Models
 {
-    internal class KarakterYaratikSpec:BaseEntity
+    internal abstract class KarakterYaratikSpec:BaseEntity
     {
+       
         public virtual int MaksimumCan { get; set; }
         public int MevcutCan { get; set; }
         public virtual int MaksimumEnerji { get; set; }
@@ -21,5 +22,7 @@ namespace OOPConsoleGame.Models
             Random rnd = new Random();
             return rnd.Next(1,21);
         }
+        public abstract void OzelSaldiri();
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using OOPConsoleGame.Models;
+﻿using OOPConsoleGame.Interfaces;
+using OOPConsoleGame.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,11 @@ namespace OOPConsoleGame
             Console.WriteLine("Yakın Saldırı: "+k.YakinSaldiri());
             Console.ReadLine();
 
+            List<IStat> statBelirle = new List<IStat>
+            {
+                new Irk(""),
+                new Sinif("")
+            };
         }
     }
 }

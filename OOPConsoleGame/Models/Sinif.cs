@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOPConsoleGame.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOPConsoleGame.Models
 {
-    internal class Sinif:BaseEntity
+    internal class Sinif:BaseEntity,IStat
     {
         public Sinif(string isim)
         {
@@ -60,6 +61,9 @@ namespace OOPConsoleGame.Models
                     break;
             }
         }
+
+      
+
         public List<Karakter> Karakterler {  get; set; }    
     }
 }

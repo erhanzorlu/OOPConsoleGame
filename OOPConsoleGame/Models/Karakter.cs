@@ -9,7 +9,7 @@ namespace OOPConsoleGame.Models
     internal class Karakter:KarakterYaratikSpec
     {
         //Todo:Abstraction Prensibi !!!
-        //Todo2: Tecrübe puanına före level ayarlaması yapılacak (Bunun için ideal olan bir kontrol metodu yazılması)
+        //Todo2: Tecrübe puanına göre level ayarlaması yapılacak (Bunun için ideal olan bir kontrol metodu yazılması)
 
         //Todo3:Silah ve esya sistemi olusturulacak
 
@@ -105,5 +105,9 @@ namespace OOPConsoleGame.Models
             return base.YakinSaldiri()+Guc+Seviye;
         }
 
+        public override void OzelSaldiri()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

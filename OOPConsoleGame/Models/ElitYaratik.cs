@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace OOPConsoleGame.Models
 {
-    internal class ElitYaratik:KarakterYaratikSpec
+    internal class ElitYaratik : KarakterYaratikSpec
     {
-         
+        public override void OzelSaldiri()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
