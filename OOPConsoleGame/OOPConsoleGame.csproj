@@ -47,6 +47,7 @@
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Bolge.cs" />
     <Compile Include="Models\ElitYaratik.cs" />
+    <Compile Include="Models\Esya.cs" />
     <Compile Include="Models\Gorev.cs" />
     <Compile Include="Models\Irk.cs" />
     <Compile Include="Models\Karakter.cs" />

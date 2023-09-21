@@ -100,8 +100,12 @@ namespace OOPConsoleGame.Models
         public int Dayaniklilik { get; set; }
         public int Para { get; set; }
 
+        //Equipment
+
+
         public override int YakinSaldiri()
         {
+            int saldiri = Sinifi.Isim == "savasci" || Sinifi.Isim == "sovalye" ? rnd.Next(1,21): rnd.Next(1,10);
             return base.YakinSaldiri()+Guc+Seviye;
         }
 

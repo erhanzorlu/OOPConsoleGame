@@ -9,6 +9,7 @@ namespace OOPConsoleGame.Models
     internal class Yaratik : KarakterYaratikSpec
     {
         // public Zindan Zindan { get; set; }
+        // 6.01
         public override void OzelSaldiri()
         {
             throw new NotImplementedException();

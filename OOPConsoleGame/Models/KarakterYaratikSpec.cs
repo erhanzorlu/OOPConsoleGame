@@ -8,7 +8,11 @@ namespace OOPConsoleGame.Models
 {
     internal abstract class KarakterYaratikSpec:BaseEntity
     {
-       
+       protected Random rnd;
+        public KarakterYaratikSpec()
+        {
+             rnd=new Random();
+        }
         public virtual int MaksimumCan { get; set; }
         public int MevcutCan { get; set; }
         public virtual int MaksimumEnerji { get; set; }
@@ -19,7 +23,7 @@ namespace OOPConsoleGame.Models
         public virtual int YakinSaldiri()
         {
 
-            Random rnd = new Random();
+        
             return rnd.Next(1,21);
         }
         public abstract void OzelSaldiri();
